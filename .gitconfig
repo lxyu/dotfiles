@@ -1,0 +1,16 @@
+[user]
+    name = lxyu
+    email = lx.yu@ele.me
+[color]
+    ui = auto
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    unstage = reset HEAD --
+[core]
+    editor = vi
+[push]
+    default = current
