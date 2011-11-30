@@ -5,6 +5,11 @@ fi
 
 # set env
 export CLICOLOR=1
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin/:$PATH
-export PYTHONPATH=/Users/lxyu/workspace/eleme/elemedjango:$PYTHONPATH
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_TYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$PATH
+export PYTHONPATH=/Users/lxyu/workspace/eleme/elemedjango
 export DJANGO_SETTINGS_MODULE=settings

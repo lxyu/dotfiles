@@ -26,3 +26,6 @@ alias p='cd ~/tools/goagent/; python proxy.py'
 alias wiki='python2.6 ~/tools/wiki/wikiserver.py'
 
 alias xunlei='aria2c --load-cookie="~/cookie.txt" -c -s3'
+
+alias cddj='cd ~/workspace/eleme/elemedjango'
+alias cdsys='cd ~/workspace/eleme/elemesys'
