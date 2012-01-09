@@ -15,6 +15,8 @@ alias vdir='vdir --color=auto'
 alias rm="rm -i"
 
 alias df='df -h'
+alias lg='ll | grep'
+alias pg='ps aux | grep'
 
 alias tmux='tmux -2'
 alias tmuxa='tmux a || tmux'
@@ -22,10 +24,23 @@ alias tmuxa='tmux a || tmux'
 alias rmds='find . -name ".DS_Store" -exec rm "{}" \;'
 alias rmpyc='find . -name "*.pyc" -exec rm "{}" \;'
 
-alias p='cd ~/tools/goagent/; python proxy.py'
-alias wiki='python2.6 ~/tools/wiki/wikiserver.py'
+alias s='ssh -f -ND 7070 elemevps'
+alias p='cd ~/tools/goagent/; python proxy.py &'
+alias vpn='cd ~/tools/sshuttle; bash sshuttle --dns -vvr elemevps 0/0'
+alias wk='python2.6 ~/tools/wiki/wikiserver.py &'
 
-alias xunlei='aria2c --load-cookie="~/cookie.txt" -c -s3'
+alias y='youtube-dl -c -l'
 
-alias cddj='cd ~/workspace/eleme/elemedjango'
+alias xld='xl download --continue --delete'
+alias xll='xl list --speed --progress'
+
+alias vpy='source ~/.virtualenvs/pyramidenv/bin/activate'
+alias vdj='source ~/.virtualenvs/djangoenv/bin/activate'
+alias vfl='source ~/.virtualenvs/flaskenv/bin/activate'
+alias vze='source ~/.virtualenvs/zeusenv/bin/activate'
+
+alias cdele='cd ~/workspace/eleme/trunk'
 alias cdsys='cd ~/workspace/eleme/elemesys'
+alias cddj='cd ~/workspace/eleme/elemedjango; vdj'
+alias cdpy='cd ~/workspace/eleme/elemepyramid/; vpy'
+alias cdze='cd ~/workspace/eleme/zeus/; vze'
