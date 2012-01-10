@@ -28,11 +28,17 @@ case "$choice" in
 esac
 
 echo "Linking dot files for root ..."
-sudo mkdir -p /root
-sudo rm -f /root/.bash_aliases /root/.bashrc /root/.profile /root/.tmux.conf /root/.vim /root/.vimrc
-sudo ln -s ~/.bashrc /root/.bashrc
-sudo ln -s ~/.bash_aliases /root/.bash_aliases
-sudo ln -s ~/.profile /root/.profile
-sudo ln -s ~/.tmux.conf /root/.tmux.conf
-sudo ln -s ~/.vim /root/.vim
-sudo ln -s ~/.vimrc /root/.vimrc
+if [ $(uname) == 'Darwin' ]; then
+    ROOT_HOME='/var/root'
+else
+    ROOT_HOME='/root'
+fi
+
+sudo mkdir -p $ROOT_HOME
+sudo rm -f $ROOT_HOME/.bash_aliases $ROOT_HOME/.bashrc $ROOT_HOME/.profile $ROOT_HOME/.tmux.conf $ROOT_HOME/.vim $ROOT_HOME/.vimrc
+sudo ln -s ~/.bashrc $ROOT_HOME/.bashrc
+sudo ln -s ~/.bash_aliases $ROOT_HOME/.bash_aliases
+sudo ln -s ~/.profile $ROOT_HOME/.profile
+sudo ln -s ~/.tmux.conf $ROOT_HOME/.tmux.conf
+sudo ln -s ~/.vim $ROOT_HOME/.vim
+sudo ln -s ~/.vimrc $ROOT_HOME/.vimrc
