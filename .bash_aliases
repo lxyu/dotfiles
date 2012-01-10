@@ -12,7 +12,7 @@ alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
-alias rm="rm -i"
+alias rm="rm -I"
 
 alias df='df -h'
 alias lg='ll | grep'
