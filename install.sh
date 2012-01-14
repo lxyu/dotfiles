@@ -21,7 +21,7 @@ ln -vs dotfiles/.profile
 ln -vs dotfiles/.rtorrent.rc
 ln -vs dotfiles/.tmux.conf
 
-read -p "Do you want to link dot files for root?" choice
+read -p "Do you want to link dot files for root?\n" choice
 case "$choice" in
     y|Y ) continue;;
     * ) exit;;
@@ -35,8 +35,12 @@ else
 fi
 
 sudo mkdir -p $ROOT_HOME
-sudo rm -vrf $ROOT_HOME/.bash_aliases $ROOT_HOME/.bashrc $ROOT_HOME/.profile $ROOT_HOME/.tmux.conf
-sudo ln -vs ~/.bashrc $ROOT_HOME/.bashrc
-sudo ln -vs ~/.bash_aliases $ROOT_HOME/.bash_aliases
-sudo ln -vs ~/.profile $ROOT_HOME/.profile
-sudo ln -vs ~/.tmux.conf $ROOT_HOME/.tmux.conf
+cd $ROOT_HOME || exit 1
+sudo rm -vrf .bash_aliases .bash_history .bashrc .profile .tmux.conf .vim .vimrc
+sudo ln -vs ~/.profile
+sudo ln -vs ~/.bashrc
+sudo ln -vs ~/.bash_aliases
+sudo ln -vs ~/.bash_history
+sudo ln -vs ~/.tmux.conf
+sudo ln -vs ~/.vim
+sudo ln -vs ~/.vimrc
