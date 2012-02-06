@@ -24,11 +24,10 @@ alias tmuxa='tmux a || tmux'
 alias rmds='find . -name ".DS_Store" -exec rm "{}" \;'
 alias rmpyc='find . -name "*.pyc" -exec rm "{}" \;'
 
-alias s='ssh -f -ND 7070 elemevps'
+alias s='ssh -Nfn -D 7070 elemevps'
 alias p='cd ~/tools/goagent/; python proxy.py &'
 alias vpn='cd ~/tools/sshuttle; bash sshuttle --dns -vvr elemevps 0/0'
 alias wk='python2.6 ~/tools/wiki/wikiserver.py &'
-
 alias y='youtube-dl -c -l'
 
 alias xld='xl download --continue --delete'
