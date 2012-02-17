@@ -4,10 +4,10 @@ alias egrep='egrep --color=auto'
 
 # some more ls aliases
 alias l='ls -CF'
-alias l.='ls -dlhF .[a-zA-Z0-9]*'
+alias l.='ls -dlhF .[a-zA-Z0-9]* --color=auto'
 alias la='ls -Ah'
-alias ll='ls -ahlF'
-alias ls='ls'
+alias ll='ls -ahlF --group-directories-first'
+alias ls='ls --color=auto'
 
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -24,7 +24,7 @@ alias tmuxa='tmux a || tmux'
 alias rmds='find . -name ".DS_Store" -exec rm "{}" \;'
 alias rmpyc='find . -name "*.pyc" -exec rm "{}" \;'
 
-alias s='pkill -f "ssh -Nfn -D 7070 elemevps"; ssh -Nfn -D 7070 elemevps'
+alias s='ssh -Nfn -D 7070 elemevps'
 alias p='cd ~/tools/goagent/; python proxy.py &'
 alias vpn='cd ~/tools/sshuttle; bash sshuttle --dns -vvr elemevps 0/0'
 alias wk='python2.6 ~/tools/wiki/wikiserver.py &'
