@@ -40,5 +40,10 @@ cd() {
     fi
 }
 
-# Load RVM function
+# Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Load virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source /usr/local/share/python/virtualenvwrapper.sh
