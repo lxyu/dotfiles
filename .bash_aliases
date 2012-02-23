@@ -21,8 +21,8 @@ alias pg='ps aux | grep'
 alias tmux='tmux -2'
 alias tmuxa='tmux a || tmux'
 
-alias rmds='find . -name ".DS_Store" -exec rm "{}" \;'
-alias rmpyc='find . -name "*.pyc" -exec rm "{}" \;'
+alias rmds='find . -name ".DS_Store" -exec rm -f "{}" \;'
+alias rmpyc='find . -name "*.pyc" -exec rm -f "{}" \;'
 
 alias s='ssh -Nfn -D 7070 elemevps'
 alias p='cd ~/tools/goagent/; python proxy.py &'
