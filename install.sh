@@ -20,3 +20,4 @@ ln -vs .dotfiles/.inputrc ~/.inputrc
 ln -vs .dotfiles/.profile ~/.profile
 ln -vs .dotfiles/.rtorrent.rc ~/.rtorrent.rc
 ln -vs .dotfiles/.tmux.conf ~/.tmux.conf
+ln -vs .dotfiles/.virtualenvs ~/.virtualenvs
