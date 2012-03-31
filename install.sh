@@ -16,6 +16,7 @@ rm -vf ~/.inputrc
 rm -vf ~/.htoprc
 rm -vf ~/.gitconfig
 rm -vf ~/.irssi
+rm -vf ~/.virtualenvs
 
 # link to dotfiles
 echo "Installing dot files ..."
