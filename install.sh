@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Cloning new dot files ..."
+/usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
+
 # remove existing files
 echo "Removing existing dot files ..."
 rm -rf ~/.dotfiles
@@ -13,9 +16,6 @@ rm -vf ~/.inputrc
 rm -vf ~/.htoprc
 rm -vf ~/.gitconfig
 rm -vf ~/.irssi
-
-echo "Cloning new dot files ..."
-/usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
 # link to dotfiles
 echo "Installing dot files ..."
