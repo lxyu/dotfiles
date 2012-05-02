@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "Cloning new dot files ..."
-/usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
-
 # remove existing files
 echo "Removing existing dot files ..."
 rm -rf ~/.dotfiles
+
+echo "Cloning new dot files ..."
+/usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
 rm -vf ~/.bash_aliases
 rm -vf ~/.bashrc
