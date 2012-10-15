@@ -8,6 +8,7 @@ echo "Cloning new dot files ..."
 /usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
 rm -vf ~/.bash_aliases
+rm -vf ~/.bash_prompt
 rm -vf ~/.bashrc
 rm -vf ~/.gitconfig
 rm -vf ~/.htoprc
@@ -22,6 +23,7 @@ rm -vf ~/.virtualenvs
 # link to dotfiles
 echo "Installing dot files ..."
 ln -vs ~/.dotfiles/.bash_aliases ~/.bash_aliases
+ln -vs ~/.dotfiles/.bash_prompt ~/.bash_prompt
 ln -vs ~/.dotfiles/.bashrc ~/.bashrc
 ln -vs ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -vs ~/.dotfiles/.htoprc ~/.htoprc
