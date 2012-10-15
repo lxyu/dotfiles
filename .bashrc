@@ -50,6 +50,9 @@ export DJANGO_SETTINGS_MODULE=settings
 # for rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# bash prompt
+source ~/.bash_prompt
+
 ##########
 # homebrew related
 ##########
