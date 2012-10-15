@@ -13,12 +13,12 @@ rm -vf ~/.bashrc
 rm -vf ~/.gitconfig
 rm -vf ~/.htoprc
 rm -vf ~/.inputrc
-rm -vf ~/.irssi
-rm -vf ~/.pip
 rm -vf ~/.profile
 rm -vf ~/.rtorrent.rc
 rm -vf ~/.tmux.conf
-rm -vf ~/.virtualenvs
+rm -vrf ~/.virtualenvs
+rm -vrf ~/.irssi
+rm -vrf ~/.pip
 
 # link to dotfiles
 echo "Installing dot files ..."
