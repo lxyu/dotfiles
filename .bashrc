@@ -62,8 +62,8 @@ if [[ -f "/usr/local/bin/brew" ]]; then
         export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
     fi
 
-    if [[ -d "$(brew --prefix python)" ]]; then
-        export PATH=$(brew --prefix python)/bin:$PATH
+    if [[ -d "/usr/local/share/python" ]]; then
+        export PATH=/usr/local/share/python:$PATH
     fi
 
     if [[ -d "$(brew --prefix ruby)" ]]; then
