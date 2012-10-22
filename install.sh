@@ -7,6 +7,10 @@ rm -rf ~/.dotfiles
 echo "Cloning new dot files ..."
 /usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
+echo "Cloning autoenv project ..."
+/usr/bin/env git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv || exit 1
+
+# remove old existing files
 rm -vf ~/.bash_aliases
 rm -vf ~/.bash_prompt
 rm -vf ~/.bashrc
