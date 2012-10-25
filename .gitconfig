@@ -9,6 +9,8 @@
     unstage = reset HEAD --
 [core]
     editor = vim
+    autocrlf = input
+    safecrlf = true
 [push]
     default = current
 [rerere]
