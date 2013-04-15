@@ -23,9 +23,10 @@ rm -vf ~/.inputrc
 rm -vf ~/.profile
 rm -vf ~/.rtorrent.rc
 rm -vf ~/.tmux.conf
-rm -vrf ~/.virtualenvs
 rm -vrf ~/.irssi
 rm -vrf ~/.pip
+rm -vrf ~/.tmux-powerlinerc
+rm -vrf ~/.virtualenvs
 
 # link to dotfiles
 echo "Installing dot files ..."
@@ -39,6 +40,7 @@ ln -vs ~/.dotfiles/.irssi ~/.irssi
 ln -vs ~/.dotfiles/.pip ~/.pip
 ln -vs ~/.dotfiles/.profile ~/.profile
 ln -vs ~/.dotfiles/.rtorrent.rc ~/.rtorrent.rc
+ln -vs ~/.dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
 ln -vs ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -vs ~/.dotfiles/.virtualenvs ~/.virtualenvs
 
