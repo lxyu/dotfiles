@@ -174,6 +174,35 @@ function git_user_verify() {
     fi
 }
 
+# define auto_virtualenv to make autoenv better for virtualenv
+function autoenv_virtualenv() {
+    typeset venv
+    venv="$1"
+    if [[ "${VIRTUAL_ENV:t}" != "$venv" ]]; then
+        # verify virtualenvwrapper installed
+        if which virtualenvwrapper.sh 1>/dev/null; then
+            source virtualenvwrapper.sh
+        else
+            echo "ERROR: virtualenvwrapper not installed."
+            exit $?
+        fi
+
+        # activate or create virtualenv
+        if workon | grep -q "^$1$"; then
+            workon $1
+        else
+            echo -n "$1 doesn't exist, creat now? [y/N] "
+            read answer
+            if [[ "$answer" == "y" ]]; then
+                mkvirtualenv $1
+                if [[ -e "requirements.txt" ]]; then
+                    pip install -U -r requirements.txt
+                fi
+            fi
+        fi
+    fi
+}
+
 function cd() {
     if builtin cd "$@"; then
         autoenv_init
