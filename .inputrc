@@ -2,3 +2,9 @@ set convert-meta off
 set meta-flag on
 set input-meta on
 set output-meta on
+
+# better bash search
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+set show-all-if-ambiguous on
+set completion-ignore-case on
