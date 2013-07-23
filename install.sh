@@ -4,8 +4,6 @@
 echo "Removing existing dot files ..."
 rm -rf ~/.dotfiles
 rm -rf ~/.autoenv
-rm -rf ~/.zsh
-rm -rf ~/.zshrc
 
 echo "Cloning new dot files ..."
 /usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
@@ -44,10 +42,4 @@ ln -vs ~/.dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
 ln -vs ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -vs ~/.dotfiles/.virtualenvs ~/.virtualenvs
 
-# Install zsh
-echo "Installing zsh ..."
-curl -L https://raw.github.com/lxyu/lxzsh/lxyu/tools/install.sh | sh
-
-# Install vim
-echo "Installing vim ..."
-curl https://raw.github.com/lxyu/vim/go -o - | sh
+cd ~/.dotfiles/ && git submodule update --init
