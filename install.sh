@@ -8,9 +8,6 @@ rm -rf ~/.autoenv
 echo "Cloning new dot files ..."
 /usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
-echo "Cloning autoenv project ..."
-/usr/bin/env git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv || exit 1
-
 # remove old existing files
 rm -vf ~/.bash_aliases
 rm -vf ~/.bash_prompt
@@ -38,6 +35,7 @@ ln -vs ~/.dotfiles/.irssi ~/.irssi
 ln -vs ~/.dotfiles/.pip ~/.pip
 ln -vs ~/.dotfiles/.profile ~/.profile
 ln -vs ~/.dotfiles/.rtorrent.rc ~/.rtorrent.rc
+ln -vs ~/.dotfiles/.tmux-osx.conf ~/.tmux-osx.conf
 ln -vs ~/.dotfiles/.tmux-powerlinerc ~/.tmux-powerlinerc
 ln -vs ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -vs ~/.dotfiles/.virtualenvs ~/.virtualenvs
