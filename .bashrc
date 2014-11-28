@@ -203,14 +203,4 @@ function autoenv_virtualenv() {
     fi
 }
 
-function cd() {
-    if builtin cd "$@"; then
-        autoenv_init
-        git_user_verify
-        return 0
-    else
-        return $?
-    fi
-}
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
