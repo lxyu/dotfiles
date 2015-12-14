@@ -1,0 +1,18 @@
+source ~/.vimrc
+
+set wrapscan
+
+nnoremap <leader>d :action CloseContent<CR>
+nnoremap <leader>D :action CloseProject<CR>
+nnoremap <leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
+nnoremap <leader>f :action FindInPath<CR>
+
+nnoremap / :action Find<CR>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
+
+nnoremap <C-P> :action GotoFile<CR>
+nnoremap <C-U> :action RecentFiles<CR>
+
+" nnoremap <right> :action Back<CR>
+" nnoremap <left> :action Forward<CR>
