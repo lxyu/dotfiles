@@ -19,10 +19,3 @@
 [rerere]
     enabled = 1
     autoupdate = 1
-[user]
-    email = i@lxyu.net
-    name = Lixin Yu
-[http]
-    proxy = http://localhost:6160
-[https]
-    proxy = http://localhost:6160

@@ -159,12 +159,12 @@ context = mod4+shift+plus
 # Otherwise the '#' and following  would be interpreted as a comment.
 background = "#222222"
 foreground = "#888888"
-timeout = 10
+timeout = 3
 
 [urgency_normal]
 background = "#00611C"
 foreground = "#ffffff"
-timeout = 0
+timeout = 5
 
 [urgency_critical]
 background = "#900000"

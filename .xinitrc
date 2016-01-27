@@ -24,24 +24,21 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# middle button scroll
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
-xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.75
-
-# disable trackpad
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0
-
-# tune fn keys
-xbindkeys
+## middle button scroll
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.75
+#
+## disable trackpad
+#xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0
 
 # fix key repeat delay and rate
 xset r rate 200 30
 
 # restore wallpaper
-sh ~/.fehbg &
+# sh ~/.fehbg &
 
 # sync clipboard
 autocutsel -fork &
