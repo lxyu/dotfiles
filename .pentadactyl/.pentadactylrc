@@ -60,6 +60,7 @@ set! layers.offmainthreadcomposition.enabled=true
 " cache
 set! browser.cache.disk.enable=false
 set! browser.cache.memory.enable=true
+set! network.dnsCacheExpiration=0
 
 " network
 set! network.http.pipelining=true
@@ -102,7 +103,7 @@ set! dom.battery.enabled=false
 set! dom.event.clipboardevents.enabled=false
 
 set! network.cookie.cookieBehavior=1
-set! network.cookie.lifetimePolicy=2
+set! network.cookie.lifetimePolicy=1
 " }}}
 
 " @section Passkeys {{{
