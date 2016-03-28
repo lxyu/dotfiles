@@ -12,10 +12,9 @@ Xft.rgba: rgb
 ! URxvt.boldFont: xft:Source Code Pro for Powerline:bold:antialias=false:size=11,xft:WenQuanYi Bitmap Song:bold:antialias=false:size=11
 ! URxvt.font: xft:DejaVu Sans Mono:antialias=false:hinting=true:size=11,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=11
 ! URxvt.boldFont: xft:DejaVu Sans Mono:bold:antialias=false:hinting=true:size=11,xft:WenQuanYi Bitmap Song:bold:antialias=false:size=11
+
 URxvt.font: xft:terminus:size=12,xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
 URxvt.boldFont: xft:terminus:size=12,xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
-!
-! *.font: xft:DejaVu Sans Mono:size=10,xft:DejaVu Sans Mono for Powerline:hinting=true:size=11,xft:WenQuanYi Bitmap Song:size=12,xfg:Font Awesome:hinting=true:size=12
 
 ! Base16 Monokai
 ! Scheme: Wimer Hazenberg (http://www.monokai.nl)

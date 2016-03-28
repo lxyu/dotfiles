@@ -7,7 +7,7 @@ nnoremap <leader>D :action CloseProject<CR>
 nnoremap <leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
 nnoremap <leader>f :action FindInPath<CR>
 
-nnoremap / :action Find<CR>
+"nnoremap / :action Find<CR>
 nnoremap n :action FindNext<CR>
 nnoremap N :action FindPrevious<CR>
 

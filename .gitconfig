@@ -4,6 +4,7 @@
     br = branch
     ci = commit
     co = checkout
+    dsf = !"git diff --color $@ | diff-so-fancy"
     last = log -1 HEAD
     lg = !"git lg1"
     lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
@@ -19,3 +20,10 @@
 [rerere]
     enabled = 1
     autoupdate = 1
+[help]
+    autocorrect = 1
+[pager]
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
+[include]
+  path = ~/.gitconfig.local
