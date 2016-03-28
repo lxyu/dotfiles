@@ -27,7 +27,6 @@ antigen bundles <<EOBUNDLES
     pip
     python
     virtualenv
-    virtualenvwrapper
 
     # Haskell Plugins
     cabal
@@ -51,7 +50,7 @@ EOBUNDLES
 
 # other plugins
 antigen bundles << Plugins
-    trapd00r/zsh-syntax-highlighting-filetypes 
+    trapd00r/zsh-syntax-highlighting-filetypes
     Tarrasch/zsh-bd
 Plugins
 
@@ -59,7 +58,6 @@ Plugins
 OS=`uname`
 if [[ $OS == 'Darwin' ]]; then
     antigen bundles <<OSX
-    atom
     brew
     brew-cask
     osx
