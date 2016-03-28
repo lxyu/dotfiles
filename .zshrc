@@ -50,8 +50,10 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 
 # other plugins
-antigen bundle trapd00r/zsh-syntax-highlighting-filetypes 
-antigen bundle Tarrasch/zsh-bd
+antigen bundles << Plugins
+    trapd00r/zsh-syntax-highlighting-filetypes 
+    Tarrasch/zsh-bd
+Plugins
 
 # OS specific plugins
 OS=`uname`
@@ -62,9 +64,7 @@ if [[ $OS == 'Darwin' ]]; then
     brew-cask
     osx
 OSX
-fi
-
-if [[ $OS == 'Linux' ]]; then
+elif [[ $OS == 'Linux' ]]; then
     antigen bundles <<Linux
     archlinux
     systemd
