@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/bin/zsh
 
 # remove existing files
 echo "Cloning new dot files ..."
 /usr/bin/env git clone git://github.com/lxyu/dotfiles.git ~/.dotfiles || exit 1
 
 echo "Linking..."
-files=(
-    # files
+
+fs=(
     .Xmodmap \
     .Xresources \
     .aria2 \
@@ -31,16 +31,15 @@ files=(
     .zprofile \
     .zshrc \
 
-    # dirs
     .i3 \
     .irssi \
     .pentadactyl \
     .tmux-themes \
     .pip \
     .virtualenvs \
-    .zsh
-)
+    .zsh \
+    );
 
-for f in $files ; do
+for f in $fs ; do
     ln -vsfn ~/.dotfiles/$f ~/$f
 done
