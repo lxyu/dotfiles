@@ -54,7 +54,7 @@ if (( $+commands[pyenv] )); then
     eval "$(pyenv virtualenv-init -)"
 
     export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV=true
-    export PATH=$PYENV_ROOT/bin:$PATH
+    export PATH=$PYENV_ROOT/shims:$PATH
 
 fi
 

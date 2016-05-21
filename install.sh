@@ -44,3 +44,6 @@ fs=(
 for f in $fs ; do
     ln -vsfn ~/.dotfiles/$f ~/$f
 done
+
+ln -vsfn ~/.dotfiles/.vim/vimrc ~/.config/nvim/init.vim
+ln -vsfn ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
