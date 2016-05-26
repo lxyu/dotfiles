@@ -78,3 +78,5 @@ antigen apply
 for file in ~/.zsh/{aliases,env,fn,misc,path}.zsh; do
     [ -r "$file" ] && source "$file"
 done
+
+source ~/.zshrc.local

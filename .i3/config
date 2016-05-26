@@ -185,7 +185,7 @@ for_window [class="Steam" title="^Steam$"] floating disable
 
 # application quick start
 # bindsym $mod+g exec --no-startup-id /usr/sbin/chromium
-bindsym $alt+l exec --no-startup-id /usr/local/bin/lockscreen
+bindsym $alt+Pause exec --no-startup-id /usr/local/bin/lockscreen
 bindsym $alt+shift+4 exec --no-startup-id /usr/local/bin/screenshot
 
 # rename workspace

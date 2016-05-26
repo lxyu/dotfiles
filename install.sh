@@ -31,11 +31,12 @@ fs=(
     .zprofile \
     .zshrc \
 
+    .ghc \
     .i3 \
     .irssi \
     .pentadactyl \
-    .tmux-themes \
     .pip \
+    .tmux-themes \
     .virtualenvs \
     .zsh \
     );

@@ -16,6 +16,9 @@ Xft.rgba: rgb
 URxvt.font: xft:terminus:size=12,xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
 URxvt.boldFont: xft:terminus:size=12,xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
 
+!URxvt.font: xft:Hasklig:size=10:antialias=false,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
+!URxvt.boldFont: xft:Hasklig:size=10:antialias=false,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
+
 ! Base16 Monokai
 ! Scheme: Wimer Hazenberg (http://www.monokai.nl)
 
