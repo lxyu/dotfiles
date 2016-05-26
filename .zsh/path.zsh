@@ -66,9 +66,9 @@ fi
 [[ -s $HOME/.rvm/scripts/rvm ]] && . $HOME/.rvm/scripts/rvm
 
 # haskell
-if [[ -d $HOME/.cabal/bin ]]; then
-    export PATH=$HOME/.cabal/bin:$PATH
-fi
+# if [[ -d $HOME/.cabal/bin ]]; then
+#     export PATH=$HOME/.cabal/bin:$PATH
+# fi
 
 if [[ -d $HOME/.local/bin ]]; then
     export PATH=$HOME/.local/bin:$PATH

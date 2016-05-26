@@ -33,12 +33,14 @@ alias xll='xl list --speed --progress'
 alias cp_p="rsync -WavP --human-readable --progress"
 alias paclean="pacman -R \$(pacman -Qdtq)"
 
+alias mosh="mosh -a"
+
+if (( $+commands[stack] )); then
+    alias hdevtools="stack exec --no-ghc-package-path hdevtools --"
+fi
+
 
 if [ "$TERM" != dumb ]; then
-
-    # pacman
-    if (( $+commands[grc] )); then
-    fi
 
     # generic colouriser
     if (( $+commands[grc] )); then
