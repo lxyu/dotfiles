@@ -55,6 +55,9 @@ export XMODIFIERS=@im=fcitx
 # firefox hw acceleration
 export MOZ_USE_OMTC=1
 
+# gnome-keyring
+dbus-update-activation-environment --systemd DISPLAY
+
 #twm &
 #xclock -geometry 50x50-1+1 &
 #xterm -geometry 80x50+494+51 &
