@@ -31,10 +31,6 @@ antigen bundles <<EOBUNDLES
     # Haskell Plugins
     cabal
     stack
-
-    # Scala Plugins
-    sbt
-    scala
 EOBUNDLES
 
 # Antigen Plugins
@@ -79,4 +75,4 @@ for file in ~/.zsh/{aliases,env,fn,misc,path}.zsh; do
     [ -r "$file" ] && source "$file"
 done
 
-source ~/.zshrc.local
+[ -r .zshrc.local ] && source ~/.zshrc.local

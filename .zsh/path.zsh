@@ -33,7 +33,7 @@ if [[ -d /opt/android-sdk ]]; then
     export PATH=/opt/android-sdk/platform-tools:/opt/android-sdk/tools:$PATH
 fi
 
-# Perl
+# perl
 if [[ -d /usr/bin/core_perl/ ]]; then
     export PATH=$PATH:/usr/bin/core_perl
 fi
@@ -72,6 +72,11 @@ fi
 
 if [[ -d $HOME/.local/bin ]]; then
     export PATH=$HOME/.local/bin:$PATH
+fi
+
+# rust
+if [[ -d $HOME/.cargo/bin ]]; then
+    export PATH=$HOME/.cargo/bin:$PATH
 fi
 
 # user bin
