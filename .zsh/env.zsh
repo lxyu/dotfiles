@@ -34,3 +34,5 @@ export MOZ_USE_OMTC=1
 # android tmp
 export ANDROID_TMP=~/.android/tmp
 
+# select my cow
+export ANSIBLE_COW_SELECTION=sheep
