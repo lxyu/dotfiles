@@ -35,54 +35,33 @@ alias paclean="pacman -R \$(pacman -Qdtq)"
 
 alias mosh="mosh -a"
 
-if (( $+commands[stack] )); then
+if command -v stack >/dev/null 2>&1; then
     alias hdevtools="stack exec --no-ghc-package-path hdevtools --"
 fi
 
 
-if [ "$TERM" != dumb ]; then
+if [ "$TERM" != dumb ] && command -v grc >/dev/null 2>&1; then
+    # Prevent grc aliases from overriding zsh completions.
+    setopt COMPLETE_ALIASES >/dev/null 2>&1
 
-    # generic colouriser
-    if (( $+commands[grc] )); then
-
-        # Prevent grc aliases from overriding zsh completions.
-        setopt COMPLETE_ALIASES
-
-        # Supported commands
-        cmds=(
-            cc \
-            configure \
-            cvs \
-            df \
-            diff \
-            dig \
-            gcc \
-            gmake \
-            ifconfig \
-            last \
-            ldap \
-            ls \
-            make \
-            mount \
-            mtr \
-            netstat \
-            ping \
-            ping6 \
-            ps \
-            traceroute \
-            traceroute6 \
-            wdiff \
-            );
-
-        # Set alias for available commands.
-        for cmd in $cmds ; do
-            if (( $+commands[$cmd] )) ; then
-                alias $cmd="grc --colour=auto $cmd"
-            fi
-        done
-
-        # Clean up variables
-        unset cmds cmd
-    fi
-
+    # Supported commands
+    alias colourify="grc -es --colour=auto"
+    alias configure='colourify ./configure'
+    alias diff='colourify diff'
+    alias make='colourify make'
+    alias gcc='colourify gcc'
+    alias g++='colourify g++'
+    alias as='colourify as'
+    alias gas='colourify gas'
+    alias ld='colourify ld'
+    alias netstat='colourify netstat'
+    alias ping='colourify ping'
+    alias traceroute='colourify /usr/sbin/traceroute'
+    alias head='colourify head'
+    alias tail='colourify tail'
+    alias dig='colourify dig'
+    alias mount='colourify mount'
+    alias ps='colourify ps'
+    alias mtr='colourify mtr'
+    alias df='colourify df'
 fi
