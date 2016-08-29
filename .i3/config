@@ -175,7 +175,8 @@ exec --no-startup-id dunst -conf /home/lxyu/.i3/dunstrc
 # application lock
 assign [class="Firefox"] → 1
 assign [class="jetbrains-idea"] → 2
-assign [class="Steam"] → 9
+assign [class="Vmware"] → 7
+assign [class="Steam"] → 8
 
 for_window [class="Firefox"] layout tabbed
 for_window [class="jetbrains-idea"] layout tabbed
