@@ -25,5 +25,9 @@
 [pager]
     diff = diff-so-fancy | less --tabs=1,5 -RFX
     show = diff-so-fancy | less --tabs=1,5 -RFX
+[commit]
+    gpgsign = true
+[user]
+    signingkey = 8E37E86E6A95733F
 [include]
   path = ~/.gitconfig.local
