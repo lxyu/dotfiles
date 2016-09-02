@@ -18,6 +18,7 @@ antigen bundles <<EOBUNDLES
     common-aliases
     extract
     gitfast
+    gpg-agent
     httpie
     redis-cli
     ssh-agent
