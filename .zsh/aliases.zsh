@@ -36,7 +36,9 @@ alias paclean="pacman -R \$(pacman -Qdtq)"
 alias mosh="mosh -a"
 
 if command -v stack >/dev/null 2>&1; then
-    alias hdevtools="stack exec --no-ghc-package-path hdevtools --"
+    alias hdevtools="stack exec --no-ghc-package-path -- hdevtools"
+    alias ghc='stack exec -- ghc'
+    alias ghci='stack exec -- ghci'
 fi
 
 
