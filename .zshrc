@@ -56,7 +56,6 @@ OS=`uname`
 if [[ $OS == 'Darwin' ]]; then
     antigen bundles <<OSX
     brew
-    brew-cask
     osx
 OSX
 elif [[ $OS == 'Linux' ]]; then
