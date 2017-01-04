@@ -39,7 +39,7 @@ if [[ -d /usr/bin/core_perl/ ]]; then
 fi
 
 if [[ -d /usr/bin/core_perl/ ]]; then
-    export PATH=$PATH:/usr/bin/vendor_perl:
+    export PATH=$PATH:/usr/bin/vendor_perl
 fi
 
 # python

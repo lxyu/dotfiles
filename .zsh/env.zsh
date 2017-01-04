@@ -36,3 +36,9 @@ export ANDROID_TMP=~/.android/tmp
 
 # select my cow
 export ANSIBLE_COW_SELECTION=sheep
+
+# export gpg tty
+export GPG_TTY=$(tty)
+
+# Term info
+export TERM=xterm-256color
