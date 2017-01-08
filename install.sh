@@ -45,5 +45,18 @@ for f in $fs ; do
     ln -vsfn ~/.dotfiles/$f ~/$f
 done
 
+# link nvim config
+mkdir -p ~/.config/nvim
 ln -vsfn ~/.dotfiles/.vim/vimrc ~/.config/nvim/init.vim
+
+# link mpv config
+mkdir -p ~/.config/mpv
 ln -vsfn ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
+
+# link user systemd service files
+mkdir -p ~/.config/systemd/user/
+ln -vsfn ~/.dotfiles/emacs.service ~/.config/systemd/user/emacs.service
+
+# config & start emacs server
+pidof systemd && systemctl --user enable emacs && systemctl --user start emacs
+cp ~/.dotfiles/bin/emc /usr/local/bin/

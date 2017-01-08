@@ -13,8 +13,8 @@ Xft.rgba: rgb
 ! URxvt.font: xft:DejaVu Sans Mono:antialias=false:hinting=true:size=11,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=11
 ! URxvt.boldFont: xft:DejaVu Sans Mono:bold:antialias=false:hinting=true:size=11,xft:WenQuanYi Bitmap Song:bold:antialias=false:size=11
 
-URxvt.font: xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:FontAwesome:hinting=true:size=12
-URxvt.boldFont: xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:FontAwesome:hinting=true:size=12
+URxvt.font: xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:FontAwesome:hinting=true:size=12,xft:all-the-icons:size=12
+URxvt.boldFont: xft:Terminess Powerline:size=12,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:FontAwesome:hinting=true:size=12,xft:all-the-icons:size=12
 
 !URxvt.font: xft:Hasklig:size=10:antialias=false,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
 !URxvt.boldFont: xft:Hasklig:size=10:antialias=false,xft:WenQuanYi Bitmap Song:medium:antialias=false:size=12,xfg:Font Awesome:hinting=true:size=12
