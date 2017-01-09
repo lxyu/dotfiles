@@ -30,4 +30,4 @@
 [user]
     signingkey = 8E37E86E6A95733F
 [include]
-  path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
