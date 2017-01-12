@@ -21,7 +21,6 @@ antigen bundles <<EOBUNDLES
     gpg-agent
     httpie
     redis-cli
-    ssh-agent
     z
 
     # Python Plugins
