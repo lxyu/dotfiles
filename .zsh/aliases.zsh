@@ -14,7 +14,8 @@ alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -ahlF'
 alias lg='ll | grep'
-alias lh='du -sh * .* | sort -h'
+alias lh='du -sh * | sort -h'
+alias lh.='du -sh * .* | sort -h'
 
 alias rm="rm -I"
 alias df='df -h'
@@ -26,7 +27,7 @@ alias tmuxa='tmux attach -t L || tmux -2 new -s L'
 alias rmds='find . -name ".DS_Store" -delete'
 alias rmpyc='find . -name "*.pyc" -delete'
 
-alias y='youtube-dl -c -f 137+172/137+140/best'
+alias y='youtube-dl --continue --mark-watched --restrict-filenames --format bestvideo+bestaudio --merge-output-format mkv --prefer-ffmpeg'
 alias xld='xl download --continue --delete --tool aria2'
 alias xll='xl list --speed --progress'
 
