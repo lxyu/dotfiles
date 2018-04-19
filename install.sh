@@ -47,7 +47,7 @@ done
 
 # link nvim config
 mkdir -p ~/.config/nvim
-ln -vsfn ~/.dotfiles/.vim/vimrc ~/.config/nvim/init.vim
+ln -vsfn ~/.vim/vimrc ~/.config/nvim/init.vim
 
 # link mpv config
 mkdir -p ~/.config/mpv
