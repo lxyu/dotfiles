@@ -56,7 +56,3 @@ ln -vsfn ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
 # link user systemd service files
 mkdir -p ~/.config/systemd/user/
 ln -vsfn ~/.dotfiles/emacs.service ~/.config/systemd/user/emacs.service
-
-# config & start emacs server
-pidof systemd && systemctl --user enable emacs && systemctl --user start emacs
-cp ~/.dotfiles/bin/emc /usr/local/bin/
