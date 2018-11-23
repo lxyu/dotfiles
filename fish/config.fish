@@ -23,7 +23,7 @@ set -x COPYFILE_DISABLE "true"
 set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
 
-set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin $PATH
+set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin /usr/local/sbin $PATH
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 #####
@@ -38,9 +38,16 @@ end
 #####
 # python
 
-set -x PROJECT_HOME "~/workspace"
-status --is-interactive
-and source (pyenv init - | psub)
+if functions -q fisher
+    set -x PROJECT_HOME "~/workspace"
+    status --is-interactive
+    and source (pyenv init - | psub)
+end
+
+if functions -q pyenv-virtualenv-init
+    status --is-interactive
+    and source (pyenv virtualenv-init - | psub)
+end
 
 
 #####
