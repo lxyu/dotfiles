@@ -24,8 +24,9 @@ set -x COPYFILE_DISABLE "true"
 
 set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
+set -x GO111MODULE on
 
-set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin /usr/local/sbin $PATH
+set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin /usr/local/sbin /snap/bin $PATH
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 #####
@@ -82,7 +83,7 @@ alias tmuxa='tmux attach -t L; or tmux -2 new -s L'
 alias rmds='find . -name ".DS_Store" -delete'
 alias rmpyc='find . -name "*.pyc" -delete'
 
-alias y='youtube-dl --continue --mark-watched --restrict-filenames --format bestvideo+bestaudio --merge-output-format mkv --prefer-ffmpeg'
+alias y='youtube-dl --continue --mark-watched --restrict-filenames --format bestvideo+bestaudio --merge-output-format mp4 --prefer-ffmpeg'
 alias xld='xl download --continue --delete --tool aria2'
 alias xll='xl list --speed --progress'
 
@@ -109,4 +110,8 @@ function fish_user_key_bindings
     bind -M insert \cf accept-autosuggestion
     bind \cf accept-autosuggestion
 end
+
 fish_user_key_bindings
+
+# set -g fish_user_paths "/usr/local/opt/qt/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths

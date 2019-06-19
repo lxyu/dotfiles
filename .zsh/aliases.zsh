@@ -36,6 +36,9 @@ alias paclean="pacman -R \$(pacman -Qdtq)"
 
 alias mosh="mosh -a"
 
+# fix zlib error
+alias pyenv='LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib -L/usr/local/opt/sqlite/lib" CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include -I/usr/local/opt/sqlite/include" PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig /usr/local/opt/sqlite/lib/pkgconfig" pyenv'
+
 if command -v stack >/dev/null 2>&1; then
     alias hdevtools="stack exec --no-ghc-package-path -- hdevtools"
     alias ghc='stack exec -- ghc'
