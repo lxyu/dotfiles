@@ -1,0 +1,9 @@
+[directory]
+truncation_length = 8
+
+[golang]
+symbol = "🏎💨 "
+
+[python]
+pyenv_version_name = true
+pyenv_prefix = "pyenv "
