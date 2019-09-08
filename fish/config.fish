@@ -18,15 +18,19 @@ set -x GPG_TTY (tty)
 set -x TERM xterm-256color
 set -x COPYFILE_DISABLE "true"
 
+#####
+# golang
+
+set -x GOPATH $HOME/go
+set -x GOBIN /usr/local/bin
+set -x GO111MODULE auto
+set -x GOPROXY direct
+# set -x GOPRIVATE "code.yogorobot.io/\*,github.com/yogorobot/\*"
 
 #####
 # path
 
-set -x GOPATH $HOME/go
-set -x GOBIN $GOPATH/bin
-set -x GO111MODULE on
-
-set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin /usr/local/sbin /snap/bin $PATH
+set -x PATH $GOBIN $HOME/.local/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/go/libexec/bin /usr/local/opt/qt/bin /usr/local/sbin /snap/bin $PATH
 set -x MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 #####
@@ -43,6 +47,11 @@ end
 # install direnv
 
 eval (direnv hook fish)
+
+#####
+# enable starship
+
+eval (starship init fish)
 
 
 #####
@@ -63,10 +72,19 @@ end
 #####
 # alias
 
-# make aliases available to sudo
-alias sudo="sudo "
+if type -q exa
+    alias ls=exa
+else if type -q lsd
+    alias ls=lsd
+end
 
-alias ls='ls --color=auto'
+if type -q bat
+    alias cat=bat
+end
+
+# make aliases available to sudo
+alias sudo='sudo '
+
 alias l='ls -l'
 alias ll='ls -ahlF'
 alias lg='ll | grep'
@@ -115,3 +133,5 @@ fish_user_key_bindings
 
 # set -g fish_user_paths "/usr/local/opt/qt/bin" $fish_user_paths
 # set -g fish_user_paths "/usr/local/opt/llvm/bin" $fish_user_paths
+
+# test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
